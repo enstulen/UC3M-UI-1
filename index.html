@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Restaurantly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header__container">
+        <div class="header__logo__container"><img class="header__logo" src="images/logo.png" alt="logo" />
+            <h2 class="header__text">Restaurantly</h2>
+        </div>
+        <div class="header__selector__container">
+            <div class="header__selector selected">
+                <p>Option 1</p>
+            </div>
+            <div class="header__selector">
+                <p>Option 2</p>
+            </div>
+            <div class="header__selector">
+                <p>Option 3</p>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content__container">
+        <div class="profile__container__mobile">
+            <img class="profile__img" src="images/morten.png" alt="profile">
+            <div class="profile__text__container">
+                <h3 class="profile__header">Morten Stulen</h3>
+                <h5 class="profile__subheader">Restaurant Reviewer</h5>
+            </div>
+        </div>
+        <div class="left__container">
+            <!-- PROFILE -->
+            <div class="profile__container">
+                <img class="profile__img" src="images/morten.png" alt="profile">
+                <div class="profile__text__container">
+                    <h3 class="profile__header">Morten Stulen</h3>
+                    <h5 class="profile__subheader">Restaurant Reviewer</h5>
+                </div>
+            </div>
+            <!-- PERSONAL INFORMATION -->
+            <div class="personal__information__container">
+                <img class="navbar__image" src="images/icons/user.png" alt="profile" data-target="#personal_info" />
+                <h3 class="left__container__header" data-target="#personal_info">Personal information</h3>
+                <p class="personal__information__text">Morten Stulen is a renowned restaurant reviewer from Norway. His
+                    favorite
+                    restaurants are McDonald's and Burger King. Member since 2015.</p>
+            </div>
+            <!-- LAST OPINIONS -->
+            <div class="opinions__container">
+                <img class="navbar__image" src="images/icons/speech.png" alt="opinions" data-target="#last_opinions" />
+                <h3 class="left__container__header" data-target="#last_opinions">Last opinions</h3>
+                <div class="opinions__selection">
+                    <img class="opinions__img" src="images/restaurants/restaurant1.jpg" alt="opinions" />
+                    <div class="opinions__text__container">
+                        <p class="opinions__header">The Corner Bear</p>
+                        <p class="opinions__subheader">Good attention to detail. A little noisy, but the food was
+                            great. Would recommend trying the fish they serve. 6/10</p>
+                    </div>
+                </div>
+                <div class="opinions__selection">
+                    <img class="opinions__img" src="images/restaurants/restaurant2.jpg" alt="opinions" />
+                    <div class="opinions__text__container">
+                        <p class="opinions__header">The Parlour</p>
+                        <p class="opinions__subheader">Very nice staff. The food was OK, but the service was amazing.
+                            The decorations were also on point. 5/10</p>
+                    </div>
+                </div>
+                <div class="opinions__selection">
+                    <img class="opinions__img" src="images/restaurants/restaurant3.jpg" alt="opinions" />
+                    <div class="opinions__text__container">
+                        <p class="opinions__header">The French Clove </p>
+                        <p class="opinions__subheader">Excusite food. Very helpful and kind staff. The wine, although
+                            expensive, is amazing. Would love to go again. 9/10</p>
+                    </div>
+                </div>
+            </div>
+            <!-- MY PREFERENCES -->
+            <div class="preferences__container">
+                <div class="preferences__header__container">
+                    <img class="navbar__image" src="images/icons/heart.png" alt="preferenes" data-target="#preferences" />
+                    <h3 class="left__container__header" data-target="#preferences">My preferences</h3>
+                    <div class="preferences__add__button"><img src="images/icons/plus.png" width="13" height="13" alt="add"></div>
+                </div>
+                <div class="preferences__selections__container">
+                    <div class="preferences__selection">
+                        <p class="preferences__selection__text">Weekend</p>
+                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                    </div>
+                    <div class="preferences__selection">
+                        <p class="preferences__selection__text">Friends</p>
+                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                    </div>
+                    <div class="preferences__selection">
+                        <p class="preferences__selection__text">Food</p>
+                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                    </div>
+                    <div class="preferences__selection">
+                        <p class="preferences__selection__text">Quiet</p>
+                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                    </div>
+                    <div class="preferences__selection">
+                        <p class="preferences__selection__text">Quality</p>
+                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right__container" id="main">
+            <iframe id="personal_info" src="personal_info.html"></iframe>
+            <iframe id="last_opinions" src="last_opinions.html"></iframe>
+            <iframe id="preferences" src="preferences.html"></iframe>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer__container">
+        <div class="footer__link__container">
+            <div class="footer__link__inner__container">
+                <a class="footer__link" href="https://www.tripadvisor.es">TripAdvisor</a>
+                <div class="footer__link__seperator"> </div>
+            </div>
+            <div class="footer__link__inner__container">
+                <a class="footer__link" href="https://www.yelp.com/">Yelp</a>
+                <div class="footer__link__seperator"> </div>
+            </div>
+            <div class="footer__link__inner__container">
+                <a class="footer__link" href="https://www.eltenedor.es">Eltenedor</a>
+            </div>
+        </div>
+        <p class="footer__copyright">Copyright Morten Stulen 2018</p>
+    </div>
+</body>
+
+</html>

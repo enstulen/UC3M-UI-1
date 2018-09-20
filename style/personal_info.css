@@ -1,0 +1,48 @@
+@import 'main.css';
+body {
+  background-color: white;
+}
+
+.main__content__input__container {
+  flex: 1;
+  padding: 30px;
+}
+.main__content__input__header {
+  margin-bottom: 10px;
+}
+.main__content__input {
+  font-size: 20px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 10px 0px 10px 0px;
+}
+.main__content__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* ACTIVITIES */
+.activities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.activity__container {
+  margin-left: 40px;
+  margin-bottom: 10px;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 7px solid var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity__text {
+  text-align: center;
+}
