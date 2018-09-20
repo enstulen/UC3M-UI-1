@@ -49,16 +49,20 @@
             </div>
             <!-- PERSONAL INFORMATION -->
             <div class="personal__information__container">
-                <img class="navbar__image" src="images/icons/user.png" alt="profile" data-target="#personal_info" />
-                <h3 class="left__container__header" data-target="#personal_info">Personal information</h3>
+                <a href="html/personal_info.html" target="contentIframe" class="personal__information__link">
+                    <img class="navbar__image" src="images/icons/user.png" alt="profile" />
+                    <h3 class="left__container__header">Personal information</h3>
+                </a>
                 <p class="personal__information__text">Morten Stulen is a renowned restaurant reviewer from Norway. His
                     favorite
                     restaurants are McDonald's and Burger King. Member since 2015.</p>
             </div>
             <!-- LAST OPINIONS -->
             <div class="opinions__container">
-                <img class="navbar__image" src="images/icons/speech.png" alt="opinions" data-target="#last_opinions" />
-                <h3 class="left__container__header" data-target="#last_opinions">Last opinions</h3>
+                <a href="html/last_opinions.html" target="contentIframe" class="personal__information__link">
+                    <img class="navbar__image" src="images/icons/speech.png" alt="opinions" />
+                    <h3 class="left__container__header">Last opinions</h3>
+                </a>
                 <div class="opinions__selection">
                     <img class="opinions__img" src="images/restaurants/restaurant1.jpg" alt="opinions" />
                     <div class="opinions__text__container">
@@ -87,9 +91,13 @@
             <!-- MY PREFERENCES -->
             <div class="preferences__container">
                 <div class="preferences__header__container">
-                    <img class="navbar__image" src="images/icons/heart.png" alt="preferenes" data-target="#preferences" />
-                    <h3 class="left__container__header" data-target="#preferences">My preferences</h3>
-                    <div class="preferences__add__button"><img src="images/icons/plus.png" width="13" height="13" alt="add"></div>
+                    <a href="html/preferences.html" target="contentIframe" class="personal__information__link">
+                        <img class="navbar__image" src="images/icons/heart.png" alt="preferenes" />
+                        <h3 class="left__container__header">My preferences</h3>
+                    </a>
+                    <div class="
+                            preferences__add__button"><img src="images/icons/plus.png"
+                            width="13" height="13" alt="add"></div>
                 </div>
                 <div class="preferences__selections__container">
                     <div class="preferences__selection">
@@ -116,9 +124,7 @@
             </div>
         </div>
         <div class="right__container" id="main">
-            <iframe id="personal_info" src="html/personal_info.html"></iframe>
-            <iframe id="last_opinions" src="html/last_opinions.html"></iframe>
-            <iframe id="preferences" src="html/preferences.html"></iframe>
+            <iframe id="personal_info" src="html/personal_info.html" name="contentIframe"></iframe>
         </div>
     </div>
     <!-- FOOTER -->

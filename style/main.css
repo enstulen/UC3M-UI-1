@@ -257,6 +257,10 @@ iframe {
   width: 100%;
   height: 100%;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 #main > iframe:not(:first-child) {
   display: none;
 }
@@ -338,6 +342,7 @@ iframe {
   }
   .preferences__header__container,
   .personal__information__container,
+  .personal__information__link,
   .opinions__container {
     display: flex;
     align-items: center;

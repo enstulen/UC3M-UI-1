@@ -1,14 +1,3 @@
-$(function() {
-  $('[data-target]').on('click', function() {
-    var target = $(this).data('target');
-    $(target)
-      .siblings()
-      .hide()
-      .end()
-      .show();
-  });
-});
-
 $(document).ready(function() {
   $('.header__selector').click(function(event) {
     $('.header__selector__container')
