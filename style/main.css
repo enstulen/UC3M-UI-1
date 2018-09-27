@@ -203,10 +203,13 @@ body {
   box-shadow: var(--default-shadow);
 }
 
-.preferences__selection__text {
+.preferences__selection__input {
   color: white;
-  padding: 10px;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
   font-size: 14px;
+  padding: 5px;
 }
 
 .preferences__selection__img {

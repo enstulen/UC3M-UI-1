@@ -96,29 +96,34 @@
                         <h3 class="left__container__header">My preferences</h3>
                     </a>
                     <div class="
-                            preferences__add__button"><img src="images/icons/plus.png"
-                            width="13" height="13" alt="add"></div>
+                            preferences__add__button" onclick="plusButtonPressed()"><img
+                            src="images/icons/plus.png" width="13" height="13" alt="add"></div>
                 </div>
-                <div class="preferences__selections__container">
+                <div class="preferences__selections__container" id="preferences__selections__container">
                     <div class="preferences__selection">
-                        <p class="preferences__selection__text">Weekend</p>
-                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                        <span class="preferences__selection__input" contenteditable="true">Weekend</span>
+                        <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png"
+                            alt="preferenes" />
                     </div>
                     <div class="preferences__selection">
-                        <p class="preferences__selection__text">Friends</p>
-                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                        <span class="preferences__selection__input" contenteditable="true">Friends</span>
+                        <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png"
+                            alt="preferenes" />
                     </div>
                     <div class="preferences__selection">
-                        <p class="preferences__selection__text">Food</p>
-                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                        <span class="preferences__selection__input" contenteditable="true">Food</span>
+                        <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png"
+                            alt="preferenes" />
                     </div>
                     <div class="preferences__selection">
-                        <p class="preferences__selection__text">Quiet</p>
-                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                        <span class="preferences__selection__input" contenteditable="true">Quiet</span>
+                        <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png"
+                            alt="preferenes" />
                     </div>
                     <div class="preferences__selection">
-                        <p class="preferences__selection__text">Quality</p>
-                        <img class="preferences__selection__img" src="images/icons/cross.png" alt="preferenes" />
+                        <span class="preferences__selection__input" contenteditable="true">Quality</span>
+                        <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png"
+                            alt="preferenes" />
                     </div>
                 </div>
             </div>
