@@ -14,6 +14,80 @@ $(document).ready(function() {
   });
 });
 
+//Economic class: 1 = Cheap, 2 = Middle, 3 = Expensive
+const more_information = {
+  cornerBear: {
+    name: 'The Corner Bear',
+    image: './images/restaurants/restaurant1.jpg',
+    contactName: 'Carlos Johnson',
+    website: 'http://www.cornerbear.com/',
+    phoneNumber: 234980234,
+    description: 'Jalla',
+    typeOfFood: ['Fish', 'Lobster'],
+    economicClass: 1,
+    review:
+      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+  },
+  parlour: {
+    name: 'The Corner Bear',
+    image: './images/restaurants/restaurant2.jpg',
+    contactName: 'Carlos Johnson',
+    website: 'http://www.cornerbear.com/',
+    phoneNumber: 234980234,
+    description: 'Jalla',
+    typeOfFood: ['Fish', 'Lobster'],
+    economicClass: 1,
+    review:
+      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+  },
+  frenchClove: {
+    name: 'The Corner Bear',
+    image: './images/restaurants/restaurant3.jpg',
+    contactName: 'Carlos Johnson',
+    website: 'http://www.cornerbear.com/',
+    phoneNumber: 234980234,
+    description: 'Jalla',
+    typeOfFood: ['Fish', 'Lobster'],
+    economicClass: 1,
+    review:
+      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+  }
+};
+
+// Show modal
+function opinionClicked(restaurantName) {
+  var restaurant = more_information[restaurantName];
+
+  var modal = document.getElementById('myModal');
+  modal.style.display = 'block';
+
+  var span = document.getElementsByClassName('close')[0];
+  span.onclick = function() {
+    modal.style.display = 'none';
+  };
+
+  var modalHeader = document.getElementById('modal__header');
+  var modalImage = document.getElementById('modal__image');
+  var modalContactPerson = document.getElementById('modal__contact__person');
+  var modalPhoneNumber = document.getElementById('modal__phone__number');
+  var modalWebsite = document.getElementById('modal__website');
+  var modalReview = document.getElementById('modal__review');
+
+  modalHeader.innerHTML = restaurant.name;
+  modalImage.src = restaurant.image;
+  modalContactPerson.innerHTML = restaurant.contactName;
+  modalPhoneNumber.innerHTML = restaurant.phoneNumber;
+  modalWebsite.href = restaurant.website;
+  modalWebsite.innerHTML = restaurant.website;
+  modalReview.innerHTML = restaurant.review;
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+}
+
 // Add a new preference
 function plusButtonPressed() {
   var container = document.getElementById('preferences__selections__container');

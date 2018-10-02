@@ -63,7 +63,7 @@
                     <img class="navbar__image" src="images/icons/speech.png" alt="opinions" />
                     <h3 class="left__container__header">Last opinions</h3>
                 </a>
-                <div class="opinions__selection">
+                <div class="opinions__selection" onclick="opinionClicked('cornerBear')">
                     <img class="opinions__img" src="images/restaurants/restaurant1.jpg" alt="opinions" />
                     <div class="opinions__text__container">
                         <p class="opinions__header">The Corner Bear</p>
@@ -71,7 +71,7 @@
                             great. Would recommend trying the fish they serve. 6/10</p>
                     </div>
                 </div>
-                <div class="opinions__selection">
+                <div class="opinions__selection" onclick="opinionClicked('parlour')">
                     <img class="opinions__img" src="images/restaurants/restaurant2.jpg" alt="opinions" />
                     <div class="opinions__text__container">
                         <p class="opinions__header">The Parlour</p>
@@ -79,7 +79,7 @@
                             The decorations were also on point. 5/10</p>
                     </div>
                 </div>
-                <div class="opinions__selection">
+                <div class="opinions__selection" onclick="opinionClicked('frenchClove')">
                     <img class="opinions__img" src="images/restaurants/restaurant3.jpg" alt="opinions" />
                     <div class="opinions__text__container">
                         <p class="opinions__header">The French Clove </p>
@@ -148,6 +148,50 @@
             </div>
         </div>
         <p class="footer__copyright">Copyright Morten Stulen 2018</p>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modal__header">Modal Header</h2>
+            </div>
+            <div class="modal__body">
+
+                <div class="modal__body__left">
+                    <h2 class="modal__body__left__header">Contact info</h2>
+                    <div class="modal__body__left__content">
+                        <h3><b>Contact Person</b></h3>
+                        <p class="modal__body__text" id="modal__contact__person" />
+                        <h3><b>Phone number</b></h3>
+                        <p class="modal__body__text" id="modal__phone__number" />
+                        <h3><b>Website</b></h3>
+                        <a href="#" id="modal__website"> </a>
+                    </div>
+                    <div class="modal__body__left__content">
+                        <h2 class="modal__body__left__header">Restaruant info</h2>
+                        <h3><b>Description</b></h3>
+                        <p class="modal__body__text" id="modal__description" />
+                        <h3><b>Type of Food</b></h3>
+                        <p class="modal__body__text" id="modal__price" />
+                        <h3><b>Price</b></h3>
+                        <p class="modal__body__text" id="modal__food_type" />
+                    </div>
+                    <h2 class="modal__body__left__header">Review</h2>
+                    <div class="modal__body__left__content">
+                        <p class="modal__body__text" id="modal__review" />
+                    </div>
+
+                </div>
+                <div class="modal__body__right">
+                    <img id="modal__image" />
+                </div>
+
+
+            </div>
+        </div>
+
     </div>
 </body>
 
