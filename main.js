@@ -21,7 +21,7 @@ const more_information = {
     image: './images/restaurants/restaurant1.jpg',
     contactName: 'Carlos Johnson',
     website: 'http://www.cornerbear.com/',
-    phoneNumber: 234980234,
+    phoneNumber: 860730589,
     description: 'Jalla',
     typeOfFood: ['Fish', 'Lobster'],
     economicClass: 1,
@@ -29,28 +29,28 @@ const more_information = {
       'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
   },
   parlour: {
-    name: 'The Corner Bear',
+    name: 'The Parlour',
     image: './images/restaurants/restaurant2.jpg',
-    contactName: 'Carlos Johnson',
-    website: 'http://www.cornerbear.com/',
+    contactName: 'George Read',
+    website: 'http://www.Theparlour.com/',
     phoneNumber: 234980234,
-    description: 'Jalla',
-    typeOfFood: ['Fish', 'Lobster'],
+    description: 'Fast',
+    typeOfFood: ['Meat', 'Cereals'],
     economicClass: 1,
     review:
-      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+      'Very nice staff. The food was OK, but the service was amazing. The decorations were also on point. I would still recommend a trip to this restaurant. I visited this back in 2013, but I bet it is still the same as it was then. 5/10'
   },
   frenchClove: {
-    name: 'The Corner Bear',
+    name: 'The French Clove',
     image: './images/restaurants/restaurant3.jpg',
-    contactName: 'Carlos Johnson',
-    website: 'http://www.cornerbear.com/',
-    phoneNumber: 234980234,
-    description: 'Jalla',
-    typeOfFood: ['Fish', 'Lobster'],
-    economicClass: 1,
+    contactName: 'Trinette Moquin',
+    website: 'http://www.frenchClove.com/',
+    phoneNumber: 740770465,
+    description: 'Serius',
+    typeOfFood: ['Salads', 'Sandwiches'],
+    economicClass: 3,
     review:
-      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+      'Excusite food. Very helpful and kind staff. The wine, although expensive, is amazing. Would love to go again. 9/10'
   }
 };
 
@@ -72,6 +72,9 @@ function opinionClicked(restaurantName) {
   var modalPhoneNumber = document.getElementById('modal__phone__number');
   var modalWebsite = document.getElementById('modal__website');
   var modalReview = document.getElementById('modal__review');
+  var modalDescription = document.getElementById('modal__description');
+  var modalFoodType = document.getElementById('modal__food_type');
+  var modalPrice = document.getElementById('modal__price');
 
   modalHeader.innerHTML = restaurant.name;
   modalImage.src = restaurant.image;
@@ -80,6 +83,19 @@ function opinionClicked(restaurantName) {
   modalWebsite.href = restaurant.website;
   modalWebsite.innerHTML = restaurant.website;
   modalReview.innerHTML = restaurant.review;
+  modalDescription.innerHTML = restaurant.description;
+  modalFoodType.innerHTML = restaurant.typeOfFood;
+  modalPrice.innerHTML = restaurant.price;
+
+  if (modalPrice== 3){
+    modalPrice.innerHTML= 'Expensive';
+  }
+  if (modalPrice== 2){
+    modalPrice.innerHTML= 'Medium';
+  }
+  if (modalPrice== 1){
+    modalPrice.innerHTML= 'cheap';
+  }
 
   window.onclick = function(event) {
     if (event.target == modal) {
