@@ -23,6 +23,20 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
 }
+.main__content__signup__button {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 15px;
+  box-shadow: var(--main-color-shadow);
+  margin-left: 30px;
+  outline: none;
+}
 
 /* ACTIVITIES */
 .activities {

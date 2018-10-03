@@ -3,6 +3,7 @@
   --secondary-color: #fc1683;
   --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3),
     0 3px 6px rgba(202, 207, 216, 0.2);
+  --main-color-shadow: 0 2px 4px var(--main-color);
   --default-margin: 10px;
   --grey-font: rgb(99, 114, 130);
   --default-padding: 20px;
@@ -74,29 +75,32 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
-.header__selector__container {
+.header__button__container {
   display: flex;
   flex-direction: row;
-  background-color: white;
   height: 40px;
-  border-radius: 20px;
-  box-shadow: var(--default-shadow);
+  justify-content: space-between;
+  align-items: center;
 }
-.header__selector {
-  background-color: white;
-  color: black;
-  padding: 0px 15px 0px 15px;
+.register__button {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
   display: flex;
   align-items: center;
   border-radius: 20px;
   font-size: 15px;
+  box-shadow: var(--main-color-shadow);
   cursor: pointer;
 }
-.header__selector.selected {
-  background-color: var(--main-color);
-  color: white;
+.login__logout__button {
+  margin-left: 20px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 /* PROFILE */
@@ -255,11 +259,21 @@ body {
   cursor: pointer;
 }
 
+/* OTHER CONTENT */
+
+.content__container__register {
+  display: none;
+}
+
+.content__container__register iframe {
+  height: 1000px;
+}
+
 /* OTHER */
 iframe {
   border: none;
   width: 100%;
-  height: 100%;
+  height: 850px;
 }
 a {
   text-decoration: none;
@@ -279,7 +293,7 @@ a {
   height: 0px;
 }
 
-/* The Modal (background) */
+/* MODAL */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -397,7 +411,7 @@ a {
     flex-direction: column;
   }
   iframe {
-    height: 1000px;
+    height: 1200px;
   }
   .right__container {
     margin-top: 10px;
@@ -446,7 +460,7 @@ a {
     height: auto;
   }
   iframe {
-    height: 1250px;
+    height: 1300px;
   }
   .preferences__header__container,
   .personal__information__container,

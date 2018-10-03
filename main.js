@@ -1,19 +1,3 @@
-// Switch between options
-$(document).ready(function() {
-  $('.header__selector').click(function(event) {
-    $('.header__selector__container')
-      .children()
-      .removeClass('selected');
-    if ($(event.target).hasClass('header__selector')) {
-      $(event.target).addClass('selected');
-    } else {
-      $(event.target)
-        .parent()
-        .addClass('selected');
-    }
-  });
-});
-
 //Economic class: 1 = Cheap, 2 = Middle, 3 = Expensive
 const more_information = {
   cornerBear: {
@@ -86,6 +70,56 @@ function opinionClicked(restaurantName) {
       modal.style.display = 'none';
     }
   };
+}
+
+window.onload = function() {
+  updateButtons();
+};
+
+function updateButtons() {
+  var userData = JSON.parse(localStorage.getItem('userData'));
+  if (userData) {
+    var registerButton = document.getElementById('register__button');
+    var loginLogoutButton = document.getElementById('login__logout__button');
+    registerButton.style.display = 'none';
+    loginLogoutButton.innerHTML = 'Logout';
+  } else {
+    var registerButton = document.getElementById('register__button');
+    var loginLogoutButton = document.getElementById('login__logout__button');
+    registerButton.style.display = 'block';
+    loginLogoutButton.innerHTML = 'Login';
+  }
+}
+
+window.addEventListener('message', function(event) {
+  logoButtonPressed();
+  window.location.reload(true);
+});
+
+function logoButtonPressed() {
+  var content = document.getElementById('content__container');
+  var contentRegister = document.getElementById('content__container__register');
+
+  content.style.display = 'flex';
+  contentRegister.style.display = 'none';
+}
+
+function loginLogoutButtonPressed() {
+  var userData = JSON.parse(localStorage.getItem('userData'));
+  if (userData) {
+    localStorage.removeItem('userData');
+  } else {
+    console.log('login');
+  }
+  updateButtons();
+}
+
+function registerButtonPressed() {
+  var content = document.getElementById('content__container');
+  var contentRegister = document.getElementById('content__container__register');
+
+  content.style.display = 'none';
+  contentRegister.style.display = 'block';
 }
 
 // Add a new preference

@@ -14,23 +14,21 @@
 <body>
     <!-- HEADER -->
     <div class="header__container">
-        <div class="header__logo__container"><img class="header__logo" src="images/logo.png" alt="logo" />
+        <div class="header__logo__container" onclick="logoButtonPressed()">
+            <img class="header__logo" src="images/logo.png" alt="logo" />
             <h2 class="header__text">Restaurantly</h2>
         </div>
-        <div class="header__selector__container">
-            <div class="header__selector selected">
-                <p>Option 1</p>
+        <div class="header__button__container">
+            <div class="register__button" id="register__button" onclick="registerButtonPressed()">
+                <p>Register</p>
             </div>
-            <div class="header__selector">
-                <p>Option 2</p>
-            </div>
-            <div class="header__selector">
-                <p>Option 3</p>
+            <div class="login__logout__button" id="login__logout__button" onclick="loginLogoutButtonPressed()">
+                <p>Login</p>
             </div>
         </div>
     </div>
     <!-- CONTENT -->
-    <div class="content__container">
+    <div class="content__container" id="content__container">
         <div class="profile__container__mobile">
             <img class="profile__img" src="images/morten.png" alt="profile">
             <div class="profile__text__container">
@@ -131,6 +129,9 @@
         <div class="right__container" id="main">
             <iframe id="personal_info" src="html/personal_info.html" name="contentIframe"></iframe>
         </div>
+    </div>
+    <div class="content__container__register" id="content__container__register">
+        <iframe name="register" id="register" src="html/register.html"></iframe>
     </div>
     <!-- FOOTER -->
     <div class="footer__container">
