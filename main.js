@@ -181,8 +181,10 @@ function loginLogoutButtonPressed() {
 function registerButtonPressed() {
   var content = document.getElementById('content__container');
   var contentRegister = document.getElementById('content__container__register');
+  var contentLogin = document.getElementById('content__container__login');
 
   content.style.display = 'none';
+  contentLogin.style.display = 'none';
   contentRegister.style.display = 'block';
 }
 

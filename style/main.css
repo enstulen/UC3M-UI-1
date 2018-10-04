@@ -264,6 +264,9 @@ body {
 .content__container__register {
   display: none;
 }
+.content__container__login {
+  display: none;
+}
 
 .content__container__register iframe {
   height: 1000px;
@@ -299,7 +302,7 @@ a {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 25px; /* Location of the box */
-  padding-bottom:30px; 
+  padding-bottom: 30px;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
