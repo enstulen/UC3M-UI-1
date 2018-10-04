@@ -8,7 +8,6 @@
 .register__right__container {
   flex: 1;
   position: relative;
-
   justify-content: center;
 }
 .register__right__container__image {

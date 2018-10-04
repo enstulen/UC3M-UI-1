@@ -17,17 +17,3 @@ function onFormSubmit() {
 
   window.parent.postMessage('message', '*');
 }
-
-function goBack() {
-  var content = parent.document.getElementById('content__container');
-  var contentRegister = parent.document.getElementById(
-    'content__container__register'
-  );
-
-  console.log(content);
-  console.log(contentRegister);
-
-  content.style.display = 'flex';
-  contentRegister.style.display = 'none';
-  window.location.href = '../index.html';
-}

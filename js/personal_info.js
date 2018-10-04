@@ -3,15 +3,30 @@ window.onload = function() {
 };
 
 function onFormSubmit() {
-  var user = $('#form__register')
+  var user = $('#form__personal__info')
     .serializeArray()
     .reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
-  user.loggedIn = true;
-  var users = localStorage.getItem('users');
-  users.push(user);
+  var users = JSON.parse(localStorage.getItem('users'));
+  var updatedUsers = users.map(function(userMap) {
+    if (userMap.loggedIn) {
+      var newUser = Object.assign({}, userMap);
+      newUser.firstName = user.firstName;
+      newUser.lastName = user.lastName;
+      newUser.email = user.email;
+      newUser.address = user.address;
+      newUser.phone = user.phone;
+      newUser.birthday = user.birthday;
+      return newUser;
+    } else {
+      return userMap;
+    }
+  });
+
+  localStorage.setItem('users', JSON.stringify(updatedUsers));
+
   alert('Updated!');
 }
 function updateFields() {

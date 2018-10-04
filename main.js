@@ -88,6 +88,7 @@ function opinionClicked(restaurantName) {
 
 window.onload = function() {
   updateButtons();
+  logoButtonPressed();
 };
 
 function loggedIn() {
@@ -135,26 +136,44 @@ function updateButtons() {
 }
 
 window.addEventListener('message', function(event) {
+  console.log('not here');
   logoButtonPressed();
   window.location.reload(true);
+});
+
+window.addEventListener('login', function(event) {
+  if (loggedIn()) {
+    logoButtonPressed();
+    window.location.reload(true);
+  }
 });
 
 function logoButtonPressed() {
   var content = document.getElementById('content__container');
   var contentRegister = document.getElementById('content__container__register');
+  var contentLogin = document.getElementById('content__container__login');
 
-  content.style.display = 'flex';
+  if (loggedIn()) {
+    content.style.display = 'flex';
+  } else {
+    contentLogin.style.display = 'none';
+    content.style.display = 'none';
+  }
   contentRegister.style.display = 'none';
 }
 
 function loginLogoutButtonPressed() {
   if (loggedIn()) {
-    //Logout
     logout();
-    console.log('logout');
   } else {
-    //Login
-    console.log('login');
+    var content = document.getElementById('content__container');
+    var contentRegister = document.getElementById(
+      'content__container__register'
+    );
+    var contentLogin = document.getElementById('content__container__login');
+    content.style.display = 'none';
+    contentRegister.style.display = 'none';
+    contentLogin.style.display = 'flex';
   }
   updateButtons();
 }
