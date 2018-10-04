@@ -90,9 +90,38 @@ window.onload = function() {
   updateButtons();
 };
 
+function loggedIn() {
+  var users = JSON.parse(localStorage.getItem('users'));
+  if (users) {
+    var loggedIn = false;
+    users.forEach(function(user) {
+      if (user.loggedIn) {
+        loggedIn = true;
+      }
+    });
+  }
+  return loggedIn;
+}
+
+function logout() {
+  var users = JSON.parse(localStorage.getItem('users'));
+  if (users) {
+    users.map(function(user) {
+      if (user.loggedIn) {
+        var index = users.indexOf(user);
+        if (index > -1) {
+          users.splice(index, 1);
+        }
+        user.loggedIn = false;
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+    });
+  }
+}
+
 function updateButtons() {
-  var userData = JSON.parse(localStorage.getItem('userData'));
-  if (userData) {
+  if (loggedIn()) {
     var registerButton = document.getElementById('register__button');
     var loginLogoutButton = document.getElementById('login__logout__button');
     registerButton.style.display = 'none';
@@ -119,10 +148,12 @@ function logoButtonPressed() {
 }
 
 function loginLogoutButtonPressed() {
-  var userData = JSON.parse(localStorage.getItem('userData'));
-  if (userData) {
-    localStorage.removeItem('userData');
+  if (loggedIn()) {
+    //Logout
+    logout();
+    console.log('logout');
   } else {
+    //Login
     console.log('login');
   }
   updateButtons();

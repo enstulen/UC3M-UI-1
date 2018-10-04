@@ -2,14 +2,16 @@ window.onload = function() {
   updateFields();
 };
 
-function onFormSubmit(formID, insideIframe) {
-  var data = $(formID)
+function onFormSubmit() {
+  var user = $('#form__register')
     .serializeArray()
     .reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
-  localStorage.setItem('userData', JSON.stringify(data));
+  user.loggedIn = true;
+  var users = localStorage.getItem('users');
+  users.push(user);
   alert('Updated!');
 }
 function updateFields() {
@@ -21,13 +23,17 @@ function updateFields() {
   var phone = document.getElementById('personal_info_phone');
   var birthday = document.getElementById('personal_info_birthday');
 
-  var userData = JSON.parse(localStorage.getItem('userData'));
-  if (userData) {
-    firstName.value = userData.firstName;
-    lastName.value = userData.lastName;
-    email.value = userData.email;
-    address.value = userData.address;
-    phone.value = userData.phone;
-    birthday.value = userData.birthday;
+  var users = JSON.parse(localStorage.getItem('users'));
+  if (users) {
+    users.forEach(function(user) {
+      if (user.loggedIn) {
+        firstName.value = user.firstName;
+        lastName.value = user.lastName;
+        email.value = user.email;
+        address.value = user.address;
+        phone.value = user.phone;
+        birthday.value = user.birthday;
+      }
+    });
   }
 }
