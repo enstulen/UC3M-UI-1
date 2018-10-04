@@ -69,16 +69,14 @@ function opinionClicked(restaurantName) {
   modalReview.innerHTML = restaurant.review;
   modalDescription.innerHTML = restaurant.description;
   modalFoodType.innerHTML = restaurant.typeOfFood;
-  modalPrice.innerHTML = restaurant.price;
+  modalPrice.innerHTML = restaurant.economicClass;
 
-  if (modalPrice== 3){
-    modalPrice.innerHTML= 'Expensive';
-  }
-  if (modalPrice== 2){
-    modalPrice.innerHTML= 'Medium';
-  }
-  if (modalPrice== 1){
-    modalPrice.innerHTML= 'cheap';
+  if (restaurant.economicClass === 3) {
+    modalPrice.innerHTML = 'Expensive';
+  } else if (restaurant.economicClass === 2) {
+    modalPrice.innerHTML = 'Medium';
+  } else if (restaurant.economicClass === 1) {
+    modalPrice.innerHTML = 'Cheap';
   }
 
   window.onclick = function(event) {
