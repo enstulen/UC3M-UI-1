@@ -16,7 +16,7 @@
 <body>
     <div class="register__main__container">
         <div class="register__left__container">
-            <form id="form__register" onsubmit="onFormSubmit()">
+            <form id="form__register" onsubmit="onFormSubmit('#form__register', false)">
                 <h2 class="main__content__header">Account info</h2>
                 <div class="main__content__inputs">
                     <div class="main__content__input__container">
@@ -25,8 +25,7 @@
                     </div>
                     <div class="main__content__input__container">
                         <p class="main__content__input__header">Password (8 characters)</p>
-                        <input placeholder="******" type="password" name="password" required class="main__content__input"
-                            pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
+                        <input placeholder="******" name="password" required class="main__content__input" pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
                     </div>
                 </div>
                 <h2 class="main__content__header">Personal info</h2>
@@ -64,7 +63,11 @@
                         <label class="label" required for="terms">I have read and accept the Terms of Use</label>
                     </div>
                 </div>
-                <button class="main__content__signup__button">Sign up</button>
+                <div class="Buttons">
+                    <button class="main__content__signup__button">Sign up</button>
+                    <button class="main__content__delete__button" onclick="registerButtonPressed()">Delete</button>
+                </div>
+                
 
             </form>
         </div>

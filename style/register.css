@@ -26,3 +26,16 @@
   align-items: center;
   margin-left: 30px;
 }
+.main__content__delete__button{
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 30px 10px 30px;
+  border-radius: 20px;
+  font-size: 15px;
+  box-shadow: var(--main-color-shadow);
+  margin-left: 30px;
+  outline: none;
+  
+}
