@@ -26,16 +26,24 @@
   align-items: center;
   margin-left: 30px;
 }
+.main__content__buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
 .main__content__delete__button{
-  background-color: red;
-  border: none;
-  color: white;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  color: black;
   cursor: pointer;
   padding: 10px 30px 10px 30px;
   border-radius: 20px;
   font-size: 15px;
-  box-shadow: var(--main-color-shadow);
   margin-left: 30px;
   outline: none;
-  
+}
+.main__content__delete__button:hover{
+  background-color: var(--main-color-darker);
+  border: 3px solid var(--main-color-darker);
+  color: white;
 }

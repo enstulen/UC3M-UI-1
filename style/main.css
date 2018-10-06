@@ -1,5 +1,6 @@
 :root {
   --main-color: #2692f8;
+  --main-color-darker: #1F7FD9;
   --secondary-color: #fc1683;
   --default-shadow: 0 3px 6px rgba(202, 207, 216, 0.3),
     0 3px 6px rgba(202, 207, 216, 0.2);
@@ -96,6 +97,9 @@ body {
   font-size: 15px;
   box-shadow: var(--main-color-shadow);
   cursor: pointer;
+}
+.register__button:hover {
+  background-color: var(--main-color-darker);
 }
 .login__logout__button {
   margin-left: 20px;

@@ -17,3 +17,7 @@ function onFormSubmit() {
 
   window.parent.postMessage('message', '*');
 }
+
+function deleteButtonPressed() {
+  $("#form__register").trigger('reset');
+}
