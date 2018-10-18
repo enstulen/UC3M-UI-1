@@ -1,40 +1,40 @@
 //Economic class: 1 = Cheap, 2 = Middle, 3 = Expensive
 const more_information = {
   cornerBear: {
-    name: 'The Corner Bear',
-    image: './images/restaurants/restaurant1.jpg',
-    contactName: 'Carlos Johnson',
-    website: 'http://www.cornerbear.com/',
+    name: "The Corner Bear",
+    image: "./images/restaurants/restaurant1.jpg",
+    contactName: "Carlos Johnson",
+    website: "http://www.cornerbear.com/",
     phoneNumber: 860730589,
-    description: 'Jalla',
-    typeOfFood: ['Fish', 'Lobster'],
+    description: "Jalla",
+    typeOfFood: ["Fish", "Lobster"],
     economicClass: 1,
     review:
-      'Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10'
+      "Good attention to detail. A little noisy, but the food was great. Would recommend trying the fish they serve. 6/10"
   },
   parlour: {
-    name: 'The Parlour',
-    image: './images/restaurants/restaurant2.jpg',
-    contactName: 'George Read',
-    website: 'http://www.Theparlour.com/',
+    name: "The Parlour",
+    image: "./images/restaurants/restaurant2.jpg",
+    contactName: "George Read",
+    website: "http://www.Theparlour.com/",
     phoneNumber: 234980234,
-    description: 'Fast',
-    typeOfFood: ['Meat', 'Cereals'],
+    description: "Fast",
+    typeOfFood: ["Meat", "Cereals"],
     economicClass: 1,
     review:
-      'Very nice staff. The food was OK, but the service was amazing. The decorations were also on point. I would still recommend a trip to this restaurant. I visited this back in 2013, but I bet it is still the same as it was then. 5/10'
+      "Very nice staff. The food was OK, but the service was amazing. The decorations were also on point. I would still recommend a trip to this restaurant. I visited this back in 2013, but I bet it is still the same as it was then. 5/10"
   },
   frenchClove: {
-    name: 'The French Clove',
-    image: './images/restaurants/restaurant3.jpg',
-    contactName: 'Trinette Moquin',
-    website: 'http://www.frenchClove.com/',
+    name: "The French Clove",
+    image: "./images/restaurants/restaurant3.jpg",
+    contactName: "Trinette Moquin",
+    website: "http://www.frenchClove.com/",
     phoneNumber: 740770465,
-    description: 'Serius',
-    typeOfFood: ['Salads', 'Sandwiches'],
+    description: "Serius",
+    typeOfFood: ["Salads", "Sandwiches"],
     economicClass: 3,
     review:
-      'Excusite food. Very helpful and kind staff. The wine, although expensive, is amazing. Would love to go again. 9/10'
+      "Excusite food. Very helpful and kind staff. The wine, although expensive, is amazing. Would love to go again. 9/10"
   }
 };
 
@@ -42,23 +42,23 @@ const more_information = {
 function opinionClicked(restaurantName) {
   var restaurant = more_information[restaurantName];
 
-  var modal = document.getElementById('myModal');
-  modal.style.display = 'block';
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
 
-  var span = document.getElementsByClassName('close')[0];
+  var span = document.getElementsByClassName("close")[0];
   span.onclick = function() {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   };
 
-  var modalHeader = document.getElementById('modal__header');
-  var modalImage = document.getElementById('modal__image');
-  var modalContactPerson = document.getElementById('modal__contact__person');
-  var modalPhoneNumber = document.getElementById('modal__phone__number');
-  var modalWebsite = document.getElementById('modal__website');
-  var modalReview = document.getElementById('modal__review');
-  var modalDescription = document.getElementById('modal__description');
-  var modalFoodType = document.getElementById('modal__food_type');
-  var modalPrice = document.getElementById('modal__price');
+  var modalHeader = document.getElementById("modal__header");
+  var modalImage = document.getElementById("modal__image");
+  var modalContactPerson = document.getElementById("modal__contact__person");
+  var modalPhoneNumber = document.getElementById("modal__phone__number");
+  var modalWebsite = document.getElementById("modal__website");
+  var modalReview = document.getElementById("modal__review");
+  var modalDescription = document.getElementById("modal__description");
+  var modalFoodType = document.getElementById("modal__food_type");
+  var modalPrice = document.getElementById("modal__price");
 
   modalHeader.innerHTML = restaurant.name;
   modalImage.src = restaurant.image;
@@ -72,16 +72,16 @@ function opinionClicked(restaurantName) {
   modalPrice.innerHTML = restaurant.economicClass;
 
   if (restaurant.economicClass === 3) {
-    modalPrice.innerHTML = 'Expensive';
+    modalPrice.innerHTML = "Expensive";
   } else if (restaurant.economicClass === 2) {
-    modalPrice.innerHTML = 'Medium';
+    modalPrice.innerHTML = "Medium";
   } else if (restaurant.economicClass === 1) {
-    modalPrice.innerHTML = 'Cheap';
+    modalPrice.innerHTML = "Cheap";
   }
 
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = 'none';
+      modal.style.display = "none";
     }
   };
 }
@@ -92,7 +92,7 @@ window.onload = function() {
 };
 
 function loggedIn() {
-  var users = JSON.parse(localStorage.getItem('users'));
+  var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
     var loggedIn = false;
     users.forEach(function(user) {
@@ -105,7 +105,7 @@ function loggedIn() {
 }
 
 function logout() {
-  var users = JSON.parse(localStorage.getItem('users'));
+  var users = JSON.parse(localStorage.getItem("users"));
   if (users) {
     users.map(function(user) {
       if (user.loggedIn) {
@@ -115,7 +115,7 @@ function logout() {
         }
         user.loggedIn = false;
         users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem("users", JSON.stringify(users));
       }
     });
   }
@@ -123,25 +123,24 @@ function logout() {
 
 function updateButtons() {
   if (loggedIn()) {
-    var registerButton = document.getElementById('register__button');
-    var loginLogoutButton = document.getElementById('login__logout__button');
-    registerButton.style.display = 'none';
-    loginLogoutButton.innerHTML = 'Logout';
+    var registerButton = document.getElementById("register__button");
+    var loginLogoutButton = document.getElementById("login__logout__button");
+    registerButton.style.display = "none";
+    loginLogoutButton.innerHTML = "Logout";
   } else {
-    var registerButton = document.getElementById('register__button');
-    var loginLogoutButton = document.getElementById('login__logout__button');
-    registerButton.style.display = 'block';
-    loginLogoutButton.innerHTML = 'Login';
+    var registerButton = document.getElementById("register__button");
+    var loginLogoutButton = document.getElementById("login__logout__button");
+    registerButton.style.display = "block";
+    loginLogoutButton.innerHTML = "Login";
   }
 }
 
-window.addEventListener('message', function(event) {
-  console.log('not here');
+window.addEventListener("message", function(event) {
   logoButtonPressed();
   window.location.reload(true);
 });
 
-window.addEventListener('login', function(event) {
+window.addEventListener("login", function(event) {
   if (loggedIn()) {
     logoButtonPressed();
     window.location.reload(true);
@@ -149,64 +148,71 @@ window.addEventListener('login', function(event) {
 });
 
 function logoButtonPressed() {
-  var content = document.getElementById('content__container');
-  var contentRegister = document.getElementById('content__container__register');
-  var contentLogin = document.getElementById('content__container__login');
+  var content = document.getElementById("content__container");
+  var contentRegister = document.getElementById("content__container__register");
+  var contentLogin = document.getElementById("content__container__login");
+  var frontpage = document.getElementById("frontpage__container");
 
   if (loggedIn()) {
-    content.style.display = 'flex';
+    content.style.display = "flex";
+    frontpage.style.display = "none";
   } else {
-    contentLogin.style.display = 'none';
-    content.style.display = 'none';
+    contentLogin.style.display = "none";
+    content.style.display = "none";
+    frontpage.style.display = "flex";
   }
-  contentRegister.style.display = 'none';
+  contentRegister.style.display = "none";
 }
 
 function loginLogoutButtonPressed() {
   if (loggedIn()) {
     logout();
   } else {
-    var content = document.getElementById('content__container');
+    var content = document.getElementById("content__container");
     var contentRegister = document.getElementById(
-      'content__container__register'
+      "content__container__register"
     );
-    var contentLogin = document.getElementById('content__container__login');
-    content.style.display = 'none';
-    contentRegister.style.display = 'none';
-    contentLogin.style.display = 'flex';
+    var frontpage = document.getElementById("frontpage__container");
+    var contentLogin = document.getElementById("content__container__login");
+    content.style.display = "none";
+    contentRegister.style.display = "none";
+    contentLogin.style.display = "flex";
+    frontpage.style.display = "none";
   }
   updateButtons();
 }
 
 function registerButtonPressed() {
-  var content = document.getElementById('content__container');
-  var contentRegister = document.getElementById('content__container__register');
-  var contentLogin = document.getElementById('content__container__login');
+  var content = document.getElementById("content__container");
+  var contentRegister = document.getElementById("content__container__register");
+  var contentLogin = document.getElementById("content__container__login");
+  var frontpage = document.getElementById("frontpage__container");
 
-  content.style.display = 'none';
-  contentLogin.style.display = 'none';
-  contentRegister.style.display = 'block';
+  content.style.display = "none";
+  contentLogin.style.display = "none";
+  frontpage.style.display = "none";
+  contentRegister.style.display = "block";
 }
 
 // Add a new preference
 function plusButtonPressed() {
-  var container = document.getElementById('preferences__selections__container');
-  const inputs = document.querySelectorAll('.preferences__selection__input');
+  var container = document.getElementById("preferences__selections__container");
+  const inputs = document.querySelectorAll(".preferences__selection__input");
 
   for (const input of inputs) {
-    if (input.innerHTML === '') {
+    if (input.innerHTML === "") {
       return;
     }
   }
 
   var child =
     ' <div class="preferences__selection"> <span class="preferences__selection__input" contenteditable="true"></span> <img class="preferences__selection__img" onclick="deletePreferenceButtonPressed(this)" src="images/icons/cross.png" alt="preferenes" /> </div>';
-  container.insertAdjacentHTML('afterbegin', child);
+  container.insertAdjacentHTML("afterbegin", child);
 }
 
 // Delete selected preference
 function deletePreferenceButtonPressed(element) {
-  var container = document.getElementById('preferences__selections__container');
+  var container = document.getElementById("preferences__selections__container");
   var parent = element.parentNode;
   container.removeChild(parent);
 }

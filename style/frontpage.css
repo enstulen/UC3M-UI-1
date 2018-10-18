@@ -1,0 +1,18 @@
+.slideshow__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.slideshow {
+  outline: none;
+}
+
+.slideshow__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 500px;
+  object-fit: contain;
+}
