@@ -89,6 +89,7 @@ function opinionClicked(restaurantName) {
 window.onload = function() {
   updateButtons();
   logoButtonPressed();
+  updateProfile();
 };
 
 function loggedIn() {
@@ -215,4 +216,25 @@ function deletePreferenceButtonPressed(element) {
   var container = document.getElementById("preferences__selections__container");
   var parent = element.parentNode;
   container.removeChild(parent);
+}
+
+function updateProfile() {
+  var name = document.getElementById("profile__header");
+  var text = document.getElementById("personal__information__text");
+
+  var users = JSON.parse(localStorage.getItem("users"));
+  if (users) {
+    users.forEach(function(user) {
+      if (user.loggedIn) {
+        console.log("heihei");
+
+        name.innerHTML = user.firstName + " " + user.lastName;
+        text.innerHTML =
+          user.firstName +
+          " " +
+          user.lastName +
+          " is a renowned restaurant reviewer from Spain. His favorite restaurants are McDonald's and Burger King. Member since 2015.";
+      }
+    });
+  }
 }
