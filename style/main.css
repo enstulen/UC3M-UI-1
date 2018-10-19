@@ -283,6 +283,16 @@ iframe {
   width: 100%;
   height: 1500px;
 }
+
+#register {
+  height: 1000px;
+}
+#login {
+  height: 500px;
+}
+#personal_info {
+  height: 900px;
+}
 a {
   text-decoration: none;
   color: black;
