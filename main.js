@@ -86,11 +86,11 @@ function opinionClicked(restaurantName) {
   };
 }
 
-window.onload = function() {
+$(document).ready(function() {
   updateButtons();
   logoButtonPressed();
   updateProfile();
-};
+});
 
 function loggedIn() {
   var users = JSON.parse(localStorage.getItem("users"));
@@ -226,8 +226,6 @@ function updateProfile() {
   if (users) {
     users.forEach(function(user) {
       if (user.loggedIn) {
-        console.log("heihei");
-
         name.innerHTML = user.firstName + " " + user.lastName;
         text.innerHTML =
           user.firstName +
