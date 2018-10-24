@@ -16,7 +16,7 @@
 <body>
     <div class="register__main__container">
         <div class="register__left__container">
-            <form id="form__register" onsubmit="onFormSubmit()">
+            <form id="form__register" name="form__register" onsubmit="onFormSubmit()">
                 <h2 class="main__content__header">Account info</h2>
                 <div class="main__content__inputs">
                     <div class="main__content__input__container">
@@ -25,7 +25,8 @@
                     </div>
                     <div class="main__content__input__container">
                         <p class="main__content__input__header">Password (8 characters)</p>
-                        <input placeholder="******" type="password" name="password" required class="main__content__input" pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
+                        <input placeholder="******" type="password" name="password" required class="main__content__input"
+                            pattern="[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]" />
                     </div>
                 </div>
                 <h2 class="main__content__header">Personal info</h2>
@@ -56,7 +57,8 @@
                     </div>
                     <div class="main__content__input__container">
                         <p class="main__content__input__header">Profile Picture</p>
-                        <input type="file" name="pic" name="profilePicture" accept="image/*" class="main__content__input" />
+                        <input type="file" id="file__input__profilePicture" name="profilePicture" accept="image/*"
+                            class="main__content__input" />
                     </div>
                     <div class="main__content__input__container__checkbox">
                         <input type="checkbox" class="main__content__input" id="terms" />
@@ -67,7 +69,7 @@
                     <button class="main__content__signup__button">Sign up</button>
                     <button type="button" class="main__content__delete__button" onclick="deleteButtonPressed()">Delete</button>
                 </div>
-                
+
 
             </form>
         </div>
