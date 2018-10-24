@@ -231,6 +231,9 @@ function updateProfile() {
         if (user.image) {
           image.src = user.image;
           image2.src = user.image;
+        } else {
+          image.src = "images/profile.svg";
+          image2.src = "images/profile.svg";
         }
         name.innerHTML = user.firstName + " " + user.lastName;
         text.innerHTML =

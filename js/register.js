@@ -9,23 +9,31 @@ function onFormSubmit() {
   user.loggedIn = true;
 
   var pic = document.getElementById("file__input__profilePicture").files[0];
+
   var reader = new FileReader();
   reader.onload = function(e) {
     var imgURL = reader.result;
     user.image = imgURL;
-
-    var users = JSON.parse(localStorage.getItem("users"));
-    if (!users) {
-      var users = [];
-      users.push(user);
-    } else {
-      users.push(user);
-    }
-    localStorage.setItem("users", JSON.stringify(users));
-
-    window.parent.postMessage("message", "*");
+    saveUser(user);
   };
-  reader.readAsDataURL(pic);
+  if (pic) {
+    reader.readAsDataURL(pic);
+  } else {
+    saveUser(user);
+  }
+}
+
+function saveUser(user) {
+  var users = JSON.parse(localStorage.getItem("users"));
+  if (!users) {
+    var users = [];
+    users.push(user);
+  } else {
+    users.push(user);
+  }
+  localStorage.setItem("users", JSON.stringify(users));
+
+  window.parent.postMessage("message", "*");
 }
 
 function deleteButtonPressed() {
